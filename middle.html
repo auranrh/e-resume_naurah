@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<script>
+    const audio = document.getElementById("bgAudio");
+    const btnIcon = document.getElementById("btnIcon");
+    const btn = document.getElementById("audioBtn");
+    // Attempt autoplay (may be blocked)
+    window.addEventListener("load", () => {
+        audio.play().then(() => {
+            btnIcon.src = "pausebutton.png";
+        }).catch(() => {
+            btnIcon.src = "playbutton.png";
+        });
+    });
+    // Toggle play/pause on click
+    btn.onclick = () => {
+        if (audio.paused) {
+            audio.play();
+            btnIcon.src = "pausebutton.png";
+        } else {
+            audio.pause();
+            btnIcon.src = "playbutton.png";
+        }
+    };
+</script>
+<html>
+<head>
+    <title>HOME</title>
+</head>
+<style>
+    body {
+        background-image: url();
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover
+    }
+    p.header {
+        margin: 5px;
+        padding: 0px;
+        font-size: 25px;
+        font-family: 'Bookman Old Style';
+        color: #6b518d;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+     p.text {
+        line-height:1.0;
+        font-family:Arial;
+        text-align:left;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        font-size:50px;
+        margin:10px;
+        padding:0;
+    }
+    p.content {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-family: 'Bookman Old Style';
+        color: #2f243e;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button {
+        border-radius: 30px;
+        background-color: #d6cde1;
+        border: none;
+        color: #374349;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 1px 1px;
+        cursor: pointer;
+        font-size:20px
+    }
+    th, td {
+        border: none;
+        border-radius: 10px;
+        background-color: #d6cde1;
+        text-align: center;
+        font-size:20px;
+    }
+    table.center{
+        margin-left:auto;
+        margin-right:auto;
+    }
+    button.floatingbutton {
+        background-color: rgb(244 67 54 / 85%);
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        font-size: 1.5rem;
+        cursor: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    audio.hidden-audio {
+        display: none;
+    }    
+    
+    .box {
+        border: 3px solid #2E3944;
+        border-radius: 10px;
+        padding: 5px;
+        content: "";
+        clear: both;
+    }
+    .box-align {
+        display: inline-block;
+    }
+
+    .floatingbutton img {
+        width: 32px;
+        height: 32px;
+        pointer-events: none;
+    }
+
+</style>
+
+<body>
+    <div id="intro">
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <img src="lcsh.png" alt="LCSH" style="float:right; height:300px; padding:5px; margin:20px">
+        <center>
+            <p class="header">
+                <b>Welcome</b>
+            </p>
+            <p class="text">
+                <b>I am Naurah Qistina</b>
+            </p>
+            <p class="content">
+                I am a 3rd year student of Bachelor in Information Science (Hons) Library <br />
+                Management from Universiti Teknologi Mara (UiTM) Cawangan Kedah, currently<br />
+                looking for an works opportunity to utilize and expand my knowledge and <br />
+                skills.I am computer literate and have a big passion to explore new knowledge.<br />
+                Work great in team and reliable.
+            </p>
+        </center>
+        <br /><br />
+        <center>
+            <a href="resume.pdf" class="text button" target="_blank">View Resume</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:naurahq.radzi@gmail.com" class="button" target="_blank">Email Me</a>
+        </center>
+        <br /><br /><br /><br /><br /><br /><br />
+    </div>
+
+    <div id="aboutme">
+        <center>
+            <p style="background-image: url(getknow.png); height: 300px; width: 1500px; font-family: 'Bookman Old Style'; text-align: center; font-size: 100px; margin-bottom: 10px; border-radius: 50px; ">
+                <br /><b>About Me</b>
+            </p>
+        </center>
+        <img src="pfp.png" alt="Profile Picture" style="height: 300px; margin-left:60px; float:left;">
+        <br /><br /><br /><br />
+        <table class="center" style="width:65%;">
+            <tr>
+                <th>NAME</th>
+                <td>NAURAH QISTINA BINTI MOHD RADZI</td>
+            </tr>
+            <tr>
+                <th>AGE</th>
+                <td>21 YEARS OLD</td>
+            </tr>
+            <tr>
+                <th>ADDRESS</th>
+                <td>No. 18, JALAN TEJA 2, TAMAN TEJA, 06400 POKOK SENA KEDAH</td>
+            </tr>
+            <tr>
+                <th>NO. PHONE</th>
+                <td>011-7028 2449</td>
+            </tr>
+            <tr>
+                <th>EMAIL</th>
+                <td><a href="mailto:naurahq.radzi@gmail.com" target="_blank">naurahq.radzi@gmail.com</a></td>
+            </tr>
+        </table>
+    </div>
+    <br /><br />
+    <div id="education">
+        <center>
+            <p style="background-image: url(getknow.png); height: 300px; width: 1500px; font-family: 'Bookman Old Style'; text-align: center; font-size: 100px; margin-bottom: 10px; border-radius: 50px;">
+                <br /><b>Education</b>
+            </p>
+        </center>
+        <center>
+            <div class="box box-align">
+                <img src="sktsg.jpg" align="middle" hspace="50" style="height:200px; width:400px;" />
+                <center>
+                    <p><h2>SK TAMAN SERI GOMBAK</h2></p>
+                    <p><b>UPSR:</b> &nbsp; 5A 1C</p>
+                </center>
+            </div> &nbsp;&nbsp;&nbsp;
+            <div class="box box-align">
+                <img src="maiwp.jpg" align="middle" hspace="50" style="height:200px; width:400px;" />
+                <center>
+                    <h2>SMA MAIWP</h2>
+                    <p><b>PT3:</b> &nbsp; 8A 2B 1C </p>
+                </center>
+            </div>
+            <p>
+                <div class="box box-align">
+                    <img src="svian.jpg" align="middle" hspace="50" style="height:200px; width:400px;" />
+                    <center>
+                        <p><h2>SMK SEKSYEN 5 WANGSA MAJU</h2></p>
+                        <p><b>SPM:</b>&nbsp;5A 3B 1C</p>
+                    </center>
+                </div> &nbsp;&nbsp;&nbsp;
+                <div class="box box-align">
+                    <img src="kmk.jpg" align="middle" hspace="50" style="height:200px; width:400px;" />
+                    <center>
+                        <p><h2>KOLEJ MATRIKULASI KEDAH</h2></p>
+                        <p><b>CGPA:</b> &nbsp;3.08</p>
+                    </center>
+                </div>
+            </p>
+            <p>
+                <div class="box box-align">
+                    <img src="uitm.jpg" align="middle" hspace="50" style="height:200px; width:400px;" />
+                    <center>
+                        <p><h2>UiTM KEDAH</h2></p>
+                        <p><b>Current CGPA:</b>&nbsp; 3.37</p>
+                    </center>
+                </div>
+            </p>
+        </center>
+    </div>
+
+    <audio id="bgAudio" autoplay>
+        <source src="cortis.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="floatingbutton" id="audioBtn">
+        <img id="btnIcon" src="playbutton.png" alt="Play">
+    </button>
+</body>
+</html>
